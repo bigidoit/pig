@@ -78,6 +78,10 @@ public class epiclatin
         if (word.length() > 1){
             secondLetter = lowerWord.substring(1, 2);
         }
+
+        if (word.length() > 2){
+            thirdLetter = lowerWord.substring(2, 3);
+        }
         
         if (firstLetter.equals("a") || firstLetter.equals("e") || firstLetter.equals("i") || firstLetter.equals("o") || firstLetter.equals("u")){
             conj = "way";
