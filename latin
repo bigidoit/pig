@@ -14,7 +14,7 @@ public class epiclatin
         
         System.out.println("Enter an expression");
         
-        String exp = input.nextLine();
+        String exp = input.nextLine() + " ";
         
         String word;
         String lowerWord;
@@ -66,40 +66,6 @@ public class epiclatin
                 start = i+1;
             }
         }
-
-
-        word = exp.substring(start);
-        lowerWord = word.toLowerCase();
-        firstLetter = lowerWord.substring(0, 1);
-        secondLetter = firstLetter;
-        thirdLetter = firstLetter;
-        conj = "ay";
-        
-        if (word.length() > 1){
-            secondLetter = lowerWord.substring(1, 2);
-        }
-
-        if (word.length() > 2){
-            thirdLetter = lowerWord.substring(2, 3);
-        }
-        
-        if (firstLetter.equals("a") || firstLetter.equals("e") || firstLetter.equals("i") || firstLetter.equals("o") || firstLetter.equals("u")){
-            conj = "way";
-        } else{
-            if (secondLetter.equals("a") || secondLetter.equals("e") || secondLetter.equals("i") || secondLetter.equals("o") || secondLetter.equals("u") || secondLetter.equals("y")){
-                word += word.substring(0, 1);
-                word = word.substring(1);
-            }else if (thirdLetter.equals("a") || thirdLetter.equals("e") || thirdLetter.equals("i") || thirdLetter.equals("o") || thirdLetter.equals("u") || thirdLetter.equals("y")){
-                word += word.substring(0, 2);
-                word = word.substring(2);
-            }else{
-                word += word.substring(0, 3);
-                word = word.substring(3);
-            }
-        }
-        
-        word += conj;
-        System.out.println(word);
     }
 }
 
